@@ -1,28 +1,27 @@
 <?xml version="1.0"?>
 <parameters>
-	
     <!-- Connection details -->
-    <dbtype>mysql</dbtype>
-    <driver>org.postgresql.Driver</driver>
-    <DBUrl>jdbc:postgresql://localhost:5432/tpcc</DBUrl>
-    <username>tpcc</username>
-    <password>tpcc</password>
-    <isolation>TRANSACTION_READ_COMMITTED</isolation>
-    
+    <dbtype>h2</dbtype>
+    <driver>org.h2.Driver</driver>
+    <DBUrl>@jdbc:h2:file:/mnt/local/test/tpcc;SCHEMA=tenant#tid;@</DBUrl>
+    <username>@tenant#tid@</username>
+    <password>?</password>
+    <isolation>TRANSACTION_SERIALIZABLE</isolation>
+    <proprietaryTaSyntax>true</proprietaryTaSyntax>
+	    
     <!-- Scale factor is the number of warehouses in TPCC -->
-    <scalefactor>2</scalefactor>
-    
+    <scalefactor>5</scalefactor>
+	    
     <!-- The workload -->
-    <terminals>2</terminals>
+    <terminals>50</terminals>
     <works>
         <work>
-            <time>10</time>
-            <rate>10000</rate>
-            <ratelimited bench="tpcc">true</ratelimited>
+            <time>3600</time>
+            <rate>unlimited</rate>
             <weights>45,43,4,4,4</weights>
         </work>
     </works>
-	
+		
     <!-- TPCC specific -->  
     <transactiontypes>
         <transactiontype>

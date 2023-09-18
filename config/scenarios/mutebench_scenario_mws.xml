@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<parameters>
+    <events>
+        <event>														   
+            <start>00:00:30</start>
+            <repeat>00:02:00</repeat>
+            <stopAfter>00:05:00</stopAfter>
+            <firstTenantID>1</firstTenantID>						
+            <tenantsPerExecution>2</tenantsPerExecution>			
+            <tenantIdIncrement>3</tenantIdIncrement>					
+            <actions>create,load,execute,clear</actions>									
+            <configFile>config/mutebench_config_mws.xml</configFile>					
+            <benchmarkSlaFile>config/sla/mutebench_sla_mws.xml</benchmarkSlaFile>			
+            <sendSla>false</sendSla>									
+            <benchmark>tpcc</benchmark>	
+        </event>
+    </events>
+</parameters>

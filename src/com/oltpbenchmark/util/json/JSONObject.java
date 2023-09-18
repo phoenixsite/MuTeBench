@@ -864,7 +864,7 @@ public class JSONObject {
 		try {
 			Object o = opt(key);
 			return o instanceof Number ? ((Number) o).doubleValue()
-					: new Double((String) o).doubleValue();
+					: Double.parseDouble((String) o);
 		} catch (Exception e) {
 			return defaultValue;
 		}
@@ -1016,7 +1016,7 @@ public class JSONObject {
 	 *             If the key is null or if the number is invalid.
 	 */
 	public JSONObject put(String key, double value) throws JSONException {
-		put(key, new Double(value));
+		put(key, Double.valueOf(value));
 		return this;
 	}
 
@@ -1032,7 +1032,7 @@ public class JSONObject {
 	 *             If the key is null.
 	 */
 	public JSONObject put(String key, int value) throws JSONException {
-		put(key, new Integer(value));
+		put(key, Integer.valueOf(value));
 		return this;
 	}
 
@@ -1048,7 +1048,7 @@ public class JSONObject {
 	 *             If the key is null.
 	 */
 	public JSONObject put(String key, long value) throws JSONException {
-		put(key, new Long(value));
+		put(key, Long.valueOf(value));
 		return this;
 	}
 
@@ -1262,26 +1262,26 @@ public class JSONObject {
 				if (s.length() > 2
 						&& (s.charAt(1) == 'x' || s.charAt(1) == 'X')) {
 					try {
-						return new Integer(Integer.parseInt(s.substring(2), 16));
+						return Integer.parseInt(s.substring(2), 16);
 					} catch (Exception e) {
 						/* Ignore the error */
 					}
 				} else {
 					try {
-						return new Integer(Integer.parseInt(s, 8));
+						return Integer.parseInt(s, 8);
 					} catch (Exception e) {
 						/* Ignore the error */
 					}
 				}
 			}
 			try {
-				return new Integer(s);
+				return Integer.valueOf(s);
 			} catch (Exception e) {
 				try {
-					return new Long(s);
+					return Long.valueOf(s);
 				} catch (Exception f) {
 					try {
-						return new Double(s);
+						return Double.valueOf(s);
 					} catch (Exception g) {
 						/* Ignore the error */
 					}

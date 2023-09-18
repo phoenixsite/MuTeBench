@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map.Entry;
 import java.util.Set;
 
+
 import com.oltpbenchmark.DistributionStatistics;
 import com.oltpbenchmark.LatencyRecord;
 import com.oltpbenchmark.Results;
@@ -18,6 +19,8 @@ import com.oltpbenchmark.multitenancy.sla.Penalty;
 import com.oltpbenchmark.multitenancy.sla.ServiceLevelAgreement;
 import com.oltpbenchmark.multitenancy.sla.WorkloadRunSLAs;
 import com.oltpbenchmark.util.Histogram;
+
+import com.oltpbenchmark.multitenancy.SortbyTime;
 
 public class TenantResults {
 	private List<Worker> workers;
@@ -172,12 +175,14 @@ public class TenantResults {
 			Penalty penalty) {
 		// add new penalty
 		if (list == null || list.isEmpty()) {
-			list = new ArrayList<Penalty>();
+			list = new ArrayList<>();
 			list.add(penalty);
 		} else {
 			// search for existing penalty for this time
 			boolean penaltyTimeExist = false;
-			for (Penalty existingPenalty : list) {
+                        for (int i = 0; i < list.size() && !penaltyTimeExist; i++) {
+                        //for (Penalty existingPenalty : list) {
+                                Penalty existingPenalty = list.get(i);
 				if (penalty.getTime() == existingPenalty.getTime()) {
 					existingPenalty.addAmount(penalty.getAmount());
 					penaltyTimeExist = true;
@@ -185,6 +190,9 @@ public class TenantResults {
 			}
 			// add new penalty
 			if (!penaltyTimeExist) {
+                                list.add(penalty);
+                                list.sort(new SortbyTime());
+                                /*
 				// add penalty by sorting the array
 				if (list.get(list.size() - 1).getTime() < penalty.getTime()) {
 					list.add(penalty);
@@ -194,7 +202,7 @@ public class TenantResults {
 							list.add(i + 1, penalty);
 						}
 					}
-				}
+				}*/
 			}
 		}
 		return list;
@@ -220,6 +228,7 @@ public class TenantResults {
 		return penalties;
 	}
 
+        
 	public void setPenalties(ArrayList<Penalty> penalties) {
 		this.penalties = penalties;
 	}

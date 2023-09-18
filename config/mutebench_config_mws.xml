@@ -1,17 +1,16 @@
 <?xml version="1.0"?>
 <parameters>
-	
     <!-- Connection details -->
     <dbtype>mysql</dbtype>
     <driver>org.postgresql.Driver</driver>
-    <DBUrl>jdbc:postgresql://localhost:5432/tpcc</DBUrl>
+    <DBUrl>@jdbc:postgresql://localhost:5432/tpcc?options=-c%20search_path=tenant#tid@</DBUrl>
     <username>tpcc</username>
     <password>tpcc</password>
     <isolation>TRANSACTION_READ_COMMITTED</isolation>
-    
+	    
     <!-- Scale factor is the number of warehouses in TPCC -->
-    <scalefactor>2</scalefactor>
-    
+    <scalefactor>5</scalefactor>
+	    
     <!-- The workload -->
     <terminals>2</terminals>
     <works>
@@ -22,7 +21,7 @@
             <weights>45,43,4,4,4</weights>
         </work>
     </works>
-	
+		
     <!-- TPCC specific -->  
     <transactiontypes>
         <transactiontype>

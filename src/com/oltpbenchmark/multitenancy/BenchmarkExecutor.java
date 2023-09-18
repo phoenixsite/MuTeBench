@@ -37,9 +37,10 @@ public class BenchmarkExecutor implements Runnable {
 	@Override
 	public void run() {
 		try {
+                        Long s = bench.getTenantOffset();
+                        String duration_format = String.format("%d min and %02d seconds", s / 60, (s % 60));
 			LOG.info("Tenant " + bench.getTenantID()
-					+ ": Executing workload in " + bench.getTenantOffset()
-					* 1000 + "ms");
+					+ ": Executing workload in " + duration_format);
 			Thread.sleep(bench.getTenantOffset() * 1000);
 		} catch (InterruptedException e1) {
 			e1.printStackTrace();

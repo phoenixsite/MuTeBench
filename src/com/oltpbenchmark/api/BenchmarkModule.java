@@ -24,6 +24,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.Driver;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.HashMap;
@@ -32,6 +33,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
+import java.util.Properties;
+
 
 import org.apache.log4j.Logger;
 
@@ -107,7 +110,7 @@ public abstract class BenchmarkModule {
 	}
 
 	// --------------------------------------------------------------------------
-	// DATABASE CONNETION
+	// DATABASE CONNECTION
 	// --------------------------------------------------------------------------
 
 	/**
@@ -116,9 +119,26 @@ public abstract class BenchmarkModule {
 	 * @throws SQLException
 	 */
 	protected final Connection makeConnection() throws SQLException {
+                /*
+                // Esto es una guarrada
+                Driver driver = DriverManager.getDriver(workConf.getDBConnection());
+                Properties info = org.postgresql.Driver.parseURL(workConf.getDBConnection(), null);
+                
+                if(info.containsKey("currentSchema")) {
+                    info.put("PGSCHEMA", info.get("currentSchema"));
+                    info.remove("currentSchema");
+                }
+                info.put("user", workConf.getDBUsername());
+                info.put("password", workConf.getDBPassword());
+                System.out.print(info);
+                Connection conn = DriverManager.getConnection(
+				workConf.getDBConnection(), info);
+                //*/
+                
 		Connection conn = DriverManager.getConnection(
 				workConf.getDBConnection(), workConf.getDBUsername(),
 				workConf.getDBPassword());
+                
 		Catalog.setSeparator(conn);
 		this.last_connection = conn;
 		return (conn);
