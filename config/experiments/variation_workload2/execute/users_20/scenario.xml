@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<parameters>
+    <events>
+        <event>
+            <start>00:32:00</start>									   
+            <actions>execute</actions>				            
+            <configFile>config/experiments/variation_workload2/execute/users_20/config_tpcc.xml</configFile>					
+            <benchmark>tpcc</benchmark>	
+        </event>
+        <event>
+            <start>00:12:00</start>									   
+            <repeat>00:30:00</repeat>
+            <stopAfter>00:43:00</stopAfter>
+            <actions>execute</actions>
+            <configFile>config/experiments/variation_workload2/execute/users_20/config_wikipedia.xml</configFile>					
+            <benchmark>wikipedia</benchmark>
+        </event>
+        <event>
+            <start>00:02:00</start>									   
+            <repeat>00:20:00</repeat>
+            <stopAfter>00:43:00</stopAfter>
+            <actions>execute</actions>
+            <configFile>config/experiments/variation_workload2/execute/users_20/config_ycsb.xml</configFile>					
+            <benchmark>ycsb</benchmark>	
+        </event>
+    </events>
+</parameters>

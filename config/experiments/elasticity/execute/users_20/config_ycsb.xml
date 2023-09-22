@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<parameters>
+    <!-- Connection details -->
+    <dbtype>postgres</dbtype>
+    <driver>org.postgresql.Driver</driver>
+    <DBUrl>@jdbc:postgresql://localhost:5432/elasticity?options=-c%20search_path=tenant#tid@</DBUrl>
+    <username>mws</username>
+    <password>mws</password>
+    <isolation>TRANSACTION_READ_COMMITTED</isolation>
+	    
+    <!-- Scalefactor in YCSB is *1000 the number of rows in the USERTABLE-->
+    <scalefactor>120</scalefactor>
+    
+    <!-- The workload -->
+    <terminals>20</terminals>
+    <works>
+        <work>
+          <time>120</time>
+          <rate>1000</rate>
+          <weights>50,50,4,4,4,4</weights>
+        </work>
+        <work>
+          <time>120</time>
+          <rate>5000</rate>
+          <weights>50,50,4,4,4,4</weights>
+        </work>
+        <work>
+          <time>240</time>
+          <rate>1000</rate>
+          <weights>50,50,4,4,4,4</weights>
+        </work>
+        <work>
+          <time>120</time>
+          <rate>3000</rate>
+          <weights>50,50,4,4,4,4</weights>
+        </work>
+    </works>
+
+    <!-- YCSB Procedures declaration -->
+    <transactiontypes>
+        <transactiontype>
+                <name>ReadRecord</name>
+        </transactiontype>
+        <transactiontype>
+                <name>InsertRecord</name>
+        </transactiontype>
+        <transactiontype>
+                <name>ScanRecord</name>
+        </transactiontype>
+        <transactiontype>
+                <name>UpdateRecord</name>
+        </transactiontype>
+        <transactiontype>
+                <name>DeleteRecord</name>
+        </transactiontype>
+        <transactiontype>
+                <name>ReadModifyWriteRecord</name>
+        </transactiontype>
+    </transactiontypes>
+</parameters>

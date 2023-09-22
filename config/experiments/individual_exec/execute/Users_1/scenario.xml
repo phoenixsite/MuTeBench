@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<parameters>
+    <events>
+        <event>
+            <!-- Execution of worload -->										   
+            <start>00:00:00</start>
+            <repeat>00:30:00</repeat>
+            <stopAfter>00:89:00</stopAfter>
+            <actions>execute</actions>
+            
+            
+            <firstTenantID>1</firstTenantID>						
+            <tenantsPerExecution>1</tenantsPerExecution>			
+            <tenantIdIncrement>3</tenantIdIncrement>					            
+            <configFile>config/experiments/individual_exec/execute/users_1/config.xml</configFile>								
+            <benchmark>tpcc</benchmark>	
+        </event>
+    </events>
+</parameters>

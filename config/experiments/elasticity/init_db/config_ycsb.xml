@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<parameters>
+    <!-- Connection details -->
+    <dbtype>postgres</dbtype>
+    <driver>org.postgresql.Driver</driver>
+    <DBUrl>@jdbc:postgresql://localhost:5432/elasticity?options=-c%20search_path=tenant#tid@</DBUrl>
+    <username>mws</username>
+    <password>mws</password>
+    <isolation>TRANSACTION_READ_COMMITTED</isolation>
+	    
+    <!-- Scalefactor in YCSB is *1000 the number of rows in the USERTABLE-->
+    <scalefactor>120</scalefactor>
+    
+    <!-- The workload -->
+    <terminals>1</terminals>
+</parameters>

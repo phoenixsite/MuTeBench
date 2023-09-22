@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<parameters>
+    <events>
+        <event>
+            <!-- Initialization of DB-->									   
+            <actions>create,load</actions>				            
+            <configFile>config/experiments/elasticity/init_db/config_tpcc.xml</configFile>					
+            <benchmark>tpcc</benchmark>	
+        </event>
+        <event>
+            <!-- Initialization of DB-->									   
+            <repeat>00:01:00</repeat>
+            <stopAfter>00:01:00</stopAfter>
+            <actions>create,load</actions>
+            <configFile>config/experiments/elasticity/init_db/config_wikipedia.xml</configFile>					
+            <benchmark>wikipedia</benchmark>
+        </event>
+        <event>
+            <!-- Initialization of DB-->									   
+            <repeat>00:01:00</repeat>
+            <stopAfter>00:02:00</stopAfter>
+            <actions>create,load</actions>
+            <configFile>config/experiments/elasticity/init_db/config_ycsb.xml</configFile>					
+            <benchmark>ycsb</benchmark>	
+        </event>
+    </events>
+</parameters>

@@ -3,11 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Carlos/Documents/DGIIM/TFG/software/benchmarks/MuTeBench_PS/config/scenarios/mutebench_scenario_mws.xml</file>
-            <file>file:/D:/Carlos/Documents/DGIIM/TFG/software/benchmarks/MuTeBench_PS/README.md</file>
-            <file>file:/D:/Carlos/Documents/DGIIM/TFG/software/benchmarks/MuTeBench_PS/src/com/oltpbenchmark/multitenancy/MuTeBench.java</file>
-            <file>file:/D:/Carlos/Documents/DGIIM/TFG/software/benchmarks/MuTeBench_PS/config/mutebench_config_mws.xml</file>
-            <file>file:/D:/Carlos/Documents/DGIIM/TFG/software/benchmarks/MuTeBench_PS/src/com/oltpbenchmark/multitenancy/ResultCollector.java</file>
+            <file>file:/C:/Users/Carlos/Documents/MuTeBench/config/experiments/variation_workload/init_db/scenario.xml</file>
         </group>
     </open-files>
 </project-private>

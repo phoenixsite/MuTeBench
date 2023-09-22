@@ -375,8 +375,10 @@ public abstract class SQLUtil {
     }
 
     public static String getMaxColSQL(Table catalog_tbl, String col) {
+        /*return String.format("SELECT MAX(%s) FROM %s",
+                col, catalog_tbl.getEscapedName());*/
         return String.format("SELECT MAX(%s) FROM %s",
-                col, catalog_tbl.getEscapedName());
+                col, catalog_tbl.getName());
     }
 
     public static String selectColValues(Table catalog_tbl, String col) {

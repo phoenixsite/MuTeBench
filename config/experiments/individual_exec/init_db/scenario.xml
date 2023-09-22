@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<parameters>
+    <events>
+        <event>
+            <!-- Initialization of DB-->									   
+            <repeat>00:01:00</repeat>
+            <stopAfter>00:02:00</stopAfter>
+            <actions>create,load</actions>
+       
+            <tenantIdIncrement>3</tenantIdIncrement>					            
+            <configFile>config/experiments/individual_exec/init_db/config.xml</configFile>					
+            <benchmark>tpcc</benchmark>	
+        </event>
+    </events>
+</parameters>

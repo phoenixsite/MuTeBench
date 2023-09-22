@@ -1,0 +1,1 @@
+java  -Xmx8G -cp `./classpath.sh bin` -Dlog4j.configuration=log4j.properties com.oltpbenchmark.multitenancy.MuTeBench --scenario config/experiments/individual_exec/init_db/scenario.xml

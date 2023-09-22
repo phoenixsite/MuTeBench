@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<parameters>
+    <events>
+        <event>
+            <!-- Initialization of DB-->									   
+            <repeat>00:01:00</repeat>
+            <stopAfter>00:04:00</stopAfter>
+            <actions>create,load</actions>
+       
+            <configFile>config/experiments/constant_load_concurrent/init_db/config.xml</configFile>					
+            <benchmark>tpcc</benchmark>	
+        </event>
+    </events>
+</parameters>
