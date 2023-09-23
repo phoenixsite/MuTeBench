@@ -1,1 +1,1 @@
-java -Xmx8G -Dlog4j.configuration=log4j.properties -jar dist/MuTeBench_PS.jar --scenario config/experiments/individual_exec/users50/scenario.xml -o config/experiments/individual_exec/users_50/results/sample -histograms --analysis-buckets 60
+java -Xmx8G -Dlog4j.configuration=log4j.properties -jar dist/MuTeBench_PS.jar --scenario config/experiments/individual_exec/users_50/scenario.xml -o config/experiments/individual_exec/users_50/results/sample -histograms --analysis-buckets 60

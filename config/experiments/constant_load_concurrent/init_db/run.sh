@@ -1,1 +1,1 @@
-java  -Xmx8G -cp `./classpath.sh bin` -Dlog4j.configuration=log4j.properties com.oltpbenchmark.multitenancy.MuTeBench --scenario config/experiments/constant_load_concurrent/init_db/scenario.xml
+java  -Xmx8G -Dlog4j.configuration=log4j.properties -jar dist/MuTeBench_PS.jar --scenario config/experiments/constant_load_concurrent/init_db/scenario.xml
