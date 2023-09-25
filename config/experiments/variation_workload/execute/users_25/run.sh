@@ -1,1 +1,0 @@
-java  -Xmx8G -cp `./classpath.sh bin` -Dlog4j.configuration=log4j.properties com.oltpbenchmark.multitenancy.MuTeBench --scenario config/experiments/variation_workload/execute/users_25/scenario.xml -o config/experiments/variation_workload/execute/users_25/results/sample -histograms --analysis-buckets 60

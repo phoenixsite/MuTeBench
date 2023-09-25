@@ -3,7 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Carlos/Documents/MuTeBench/config/experiments/individual_exec/execute/users_50/run.sh</file>
+            <file>file:/C:/Users/Carlos/Documents/MuTeBench/config/experiments/elasticity/init_db/scenario.xml</file>
+            <file>file:/C:/Users/Carlos/Documents/MuTeBench/config/experiments/elasticity/init_db/config_wikipedia.xml</file>
+            <file>file:/C:/Users/Carlos/Documents/MuTeBench/config/experiments/variation_workload2/init_db/config_wikipedia.xml</file>
+            <file>file:/C:/Users/Carlos/Documents/MuTeBench/config/experiments/elasticity/init_db/config_tpcc.xml</file>
+            <file>file:/C:/Users/Carlos/Documents/MuTeBench/config/experiments/elasticity/init_db/config_ycsb.xml</file>
+            <file>file:/C:/Users/Carlos/Documents/MuTeBench/config/experiments/variation_workload2/init_db/config_ycsb.xml</file>
         </group>
     </open-files>
 </project-private>

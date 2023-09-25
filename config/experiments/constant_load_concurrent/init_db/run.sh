@@ -1,1 +1,0 @@
-java  -Xmx8G -Dlog4j.configuration=log4j.properties -jar dist/MuTeBench_PS.jar --scenario config/experiments/constant_load_concurrent/init_db/scenario.xml

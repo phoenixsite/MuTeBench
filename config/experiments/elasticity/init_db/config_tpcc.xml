@@ -3,7 +3,7 @@
     <!-- Connection details -->
     <dbtype>postgres</dbtype>
     <driver>org.postgresql.Driver</driver>
-    <DBUrl>@jdbc:postgresql://35.181.26.74:5432/elasticity?options=-c%20search_path=tenant#tid@</DBUrl>
+    <DBUrl>@jdbc:postgresql://localhost:5432/elasticity?options=-c%20search_path=tenant#tid@</DBUrl>
     <username>mws</username>
     <password>mws</password>
     <isolation>TRANSACTION_READ_COMMITTED</isolation>

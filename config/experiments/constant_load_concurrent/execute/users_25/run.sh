@@ -1,1 +1,0 @@
-java  -Xmx8G -Dlog4j.configuration=log4j.properties -jar dist/MuTeBench_PS.jar --scenario config/experiments/constant_load_concurrent/execute/users_25/scenario.xml -o config/experiments/constant_load_concurrent/execute/users_25/results/sample -histograms --analysis-buckets 60
